@@ -61,31 +61,23 @@
             font-size: 1.2em;
             font-weight: bold;
             color: white;
-            background: #00aaff;
+            background: grey;
             border: 2px solid white;
             border-radius: 30px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
             text-decoration: none;
         }
         .button:hover {
-            animation: bounce 0.5s ease;
-        }
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
+            transform: scale(1.1);
         }
         .left {
-            background: #00aaff;
-            color: black;
+            background: grey;
+            color: white;
         }
         .right {
-            background: transparent;
-            border: 2px solid #00aaff;
+            background: grey;
+            border: 2px solid white;
             color: white;
         }
     </style>
@@ -95,7 +87,7 @@
     <h1 class="title">Exoliner Serverside</h1>
     <p class="subtitle">Experience the web-based scripting revolution with military-grade security and unmatched games.</p>
     <div class="button-container">
-        <a href="#" class="button left">Get Started</a>
+        <a href="https://example.com" class="button left">Get Started</a>
         <a href="#" class="button right">Join our Discord</a>
     </div>
 </body>
