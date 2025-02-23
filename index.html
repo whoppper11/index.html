@@ -50,8 +50,9 @@
         .button-container {
             margin-top: 20px;
             display: flex;
-            justify-content: space-between;
-            width: 60%;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
             position: relative;
             z-index: 1;
         }
@@ -80,10 +81,12 @@
             }
         }
         .left {
-            align-self: flex-start;
+            position: absolute;
+            left: 30%;
         }
         .right {
-            align-self: flex-end;
+            position: absolute;
+            right: 30%;
         }
     </style>
 </head>
