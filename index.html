@@ -16,26 +16,48 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            animation: moveStars 20s linear infinite;
+        }
+        @keyframes moveStars {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-100%);
+            }
         }
         .title {
             font-size: 3em;
             font-weight: bold;
             color: #36a2ff;
+            position: relative;
+            z-index: 1;
         }
         .subtitle {
             font-size: 1.2em;
             color: #ccc;
+            position: relative;
+            z-index: 1;
         }
         .button-container {
             margin-top: 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
+            width: 60%;
+            position: relative;
+            z-index: 1;
         }
         .button {
             display: inline-block;
             padding: 12px 24px;
-            margin: 10px;
             font-size: 1.2em;
             font-weight: bold;
             color: white;
@@ -57,14 +79,21 @@
                 transform: translateY(-10px);
             }
         }
+        .left {
+            align-self: flex-start;
+        }
+        .right {
+            align-self: flex-end;
+        }
     </style>
 </head>
 <body>
+    <div class="stars"></div>
     <h1 class="title">Exoliner Serverside</h1>
     <p class="subtitle">Experience the web-based scripting revolution with military-grade security and unmatched games.</p>
     <div class="button-container">
-        <a href="#" class="button">Get Started</a>
-        <a href="#" class="button">Join our Discord</a>
+        <a href="#" class="button left">Get Started</a>
+        <a href="#" class="button right">Join our Discord</a>
     </div>
 </body>
 </html>
